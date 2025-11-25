@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 5555;
 
-mongoose.connect("mongodb://localhost:27017/bibliotheque");
+mongoose.connect("mongodb://localhost:27017/BDDrj");
 // app.use(express.urlencoded({extended:true}));
 // app.use(express.jscon());
 
@@ -18,10 +18,19 @@ app.listen(PORT, ()=>{
     console.log(`ok sur le port ${PORT}`);
 })
 
-const Film = mongoose.model("films",{
+const Film = mongoose.model("taches",{
     titre:String,
-    annee:Number,
-    genre:String
+    description:String,
+    dateCreation:Date,
+    echeance:Date,
+    statut:String,
+    priorite:String,
+    auteur: { String},
+    categorie: String,
+    etiquettes: [ String],
+    'sous-taches': [Object],
+    commentaires: [ Object ],
+    historiqueModifications: [ Object ]
 });
 Film.find().then(console.log);
 
