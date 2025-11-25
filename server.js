@@ -8,10 +8,11 @@ mongoose.connect("mongodb://localhost:27017/BDDrj");
 // app.use(express.jscon());
 
 
-app.get("/", async (req, res)=> {
+// app.get("/", async (req, res)=> {
 
-res.redirect("/accueil");
-});
+// // res.redirect("/accueil");
+// // });
+
 
 
 app.listen(PORT, ()=>{
