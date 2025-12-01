@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des tâches</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid black; padding: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Liste des tâches</h1>
+
+  {{#if tasks.length}}
+    {{#each tasks}}
+      <h2>{{titre}}</h2>
+      <p><strong>Description:</strong> {{description}}</p>
+      <p><strong>Auteur:</strong> {{auteur.nom}} {{auteur.prenom}} ({{auteur.email}})</p>
+      <p><strong>Date de création:</strong> {{dateCreation}}</p>
+      <p><strong>Échéance:</strong> {{echeance}}</p>
+      <p><strong>Statut:</strong> {{statut}}</p>
+      <p><strong>Priorité:</strong> {{priorite}}</p>
+      <p><strong>Catégorie:</strong> {{categorie}}</p>
+
+      <p><strong>Étiquettes:</strong>
+        {{#each etiquettes}}
+          <span>{{this}}</span>
+        {{/each}}
+      </p>
+
+      {{#if sous-taches}}
+        <p><strong>Sous-tâches:</strong></p>
+        <ul>
+          {{#each sous-taches}}
+            <li>{{titre}} - {{statut}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+
+      {{#if commentaires}}
+        <p><strong>Commentaires:</strong></p>
+        <ul>
+          {{#each commentaires}}
+            <li>{{contenu}} - {{auteur}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+
+      <hr>
+    {{/each}}
+  {{else}}
+    <p>Aucune tâche trouvée.</p>
+  {{/if}}
+</body>
+</html>
