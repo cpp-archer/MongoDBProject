@@ -13,6 +13,13 @@ mongoose.connect("mongodb://localhost:27017/BDDrj");
 // // res.redirect("/accueil");
 // // });
 
+const path = require("path");
+
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "/accueil.html"));
+});
+
 
 
 app.listen(PORT, ()=>{
