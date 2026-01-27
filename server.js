@@ -66,7 +66,7 @@ app.delete("/api/tasks/:id", async (req, res) => {
     await Task.findByIdAndDelete(req.params.id);
     res.json({ message: "tache supprimée" });
 });
-const Task = require("./model/modelTask");
+//const Task = require("./model/modelTask");
 
 
 

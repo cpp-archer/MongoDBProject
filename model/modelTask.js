@@ -43,3 +43,6 @@ const TaskSchema = new mongoose.Schema({
 });
 
 const TaskModel = mongoose.model("Task", TaskSchema);
+
+// Export du modèle (ligne manquante)
+module.exports = TaskModel;

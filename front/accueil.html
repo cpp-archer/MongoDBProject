@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Tâches - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Gestionnaire de Tâches</h1>
+            <p class="subtitle">Organisez vos projets efficacement</p>
+        </header>
+
+        <main class="home-content">
+            <div class="welcome-section">
+                <h2>Bienvenue !</h2>
+                <p>Cette application vous permet de gérer vos tâches de manière simple et efficace.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📝</div>
+                    <h3>Créer des tâches</h3>
+                    <p>Ajoutez facilement de nouvelles tâches avec descriptions, échéances et priorités</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">✅</div>
+                    <h3>Suivre l'avancement</h3>
+                    <p>Consultez et modifiez le statut de vos tâches en temps réel</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">💬</div>
+                    <h3>Collaborer</h3>
+                    <p>Ajoutez des commentaires et gérez les sous-tâches</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h3>Filtrer et trier</h3>
+                    <p>Retrouvez rapidement vos tâches par statut, priorité ou catégorie</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="/TasksList" class="btn btn-primary">
+                    <span>📋</span> Voir toutes les tâches
+                </a>
+                <a href="/createTask" class="btn btn-success">
+                    <span>➕</span> Créer une nouvelle tâche
+                </a>
+            </div>
+
+            <div class="stats-section">
+                <h3>Statistiques rapides</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalTasks">-</div>
+                        <div class="stat-label">Tâches totales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="completedTasks">-</div>
+                        <div class="stat-label">Terminées</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="inProgressTasks">-</div>
+                        <div class="stat-label">En cours</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="pendingTasks">-</div>
+                        <div class="stat-label">En attente</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="accueil.js"></script>
+</body>
+</html>
