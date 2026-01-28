@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une Tâche</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>➕ Créer une Nouvelle Tâche</h1>
+            <nav>
+                <a href="/" class="btn btn-secondary">🏠 Accueil</a>
+                <a href="/TasksList" class="btn btn-secondary">📋 Liste</a>
+            </nav>
+        </header>
+
+        <main>
+            <form id="createTaskForm">
+                <div class="form-group">
+                    <label for="titre">Titre * :</label>
+                    <input type="text" id="titre" required placeholder="Ex: Finaliser le rapport">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description :</label>
+                    <textarea id="description" rows="4" placeholder="Décrivez la tâche..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="statut">Statut * :</label>
+                        <select id="statut" required>
+                            <option value="En attente">En attente</option>
+                            <option value="En cours">En cours</option>
+                            <option value="Terminée">Terminée</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="priorite">Priorité * :</label>
+                        <select id="priorite" required>
+                            <option value="Basse">Basse</option>
+                            <option value="Moyenne" selected>Moyenne</option>
+                            <option value="Haute">Haute</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="categorie">Catégorie :</label>
+                        <select id="categorie">
+                            <option value="">Sélectionner...</option>
+                            <option value="Travail">Travail</option>
+                            <option value="Personnel">Personnel</option>
+                            <option value="Urgent">Urgent</option>
+                            <option value="Projet">Projet</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="echeance">Échéance :</label>
+                        <input type="date" id="echeance">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="etiquettes">Étiquettes (séparées par virgules) :</label>
+                    <input type="text" id="etiquettes" placeholder="Ex: important, urgent">
+                </div>
+
+                <h3>👤 Auteur</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" placeholder="email@example.com">
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">✅ Créer</button>
+                    <button type="reset" class="btn btn-secondary">🔄 Réinitialiser</button>
+                    <a href="/TasksList" class="btn btn-secondary">❌ Annuler</a>
+                </div>
+            </form>
+
+            <div id="message" class="message" style="display: none;"></div>
+        </main>
+    </div>
+
+    <script src="createTask.js"></script>
+</body>
+</html>
