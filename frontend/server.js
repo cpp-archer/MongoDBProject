@@ -9,19 +9,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Routes HTML
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "accueil.html"));
+    res.sendFile(path.join(__dirname, "public/html", "accueil.html"));
 });
 
 app.get("/TasksList", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "TasksList.html"));
+    res.sendFile(path.join(__dirname, "public/html", "TasksList.html"));
 });
 
 app.get("/createTask", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "createTask.html"));
+    res.sendFile(path.join(__dirname, "public/html", "createTask.html"));
 });
 
 app.get("/taskInfo/:id", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "taskInfo.html"));
+    res.sendFile(path.join(__dirname, "public/html", "taskInfo.html"));
 });
 
 // Démarrage serveur
