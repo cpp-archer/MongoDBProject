@@ -41,6 +41,7 @@ function buildQueryParams() {
  * Charge les tâches depuis l'API avec les filtres appliqués
  * Envoie une requête GET avec les paramètres de filtrage dans l'URL
  */
+//load depui l'API
 async function loadTasks() {
     try {
         const queryParams = buildQueryParams();
