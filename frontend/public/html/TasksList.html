@@ -17,7 +17,7 @@
         </header>
 
         <div class="filters-section">
-            <h3>🔍 Filtres</h3>
+            <h3>Filtres</h3>
             <div class="filters-grid">
                 <select id="filterStatut">
                     <option value="">Tous les statuts</option>
@@ -41,11 +41,21 @@
                     <option value="Projet">Projet</option>
                 </select>
 
+                <input type="text" id="filterEtiquette" placeholder="Étiquette...">
+
+                <input type="date" id="filterAvant" placeholder="Avant...">
+
+                <input type="date" id="filterApres" placeholder="Après...">
+
                 <select id="sortBy">
                     <option value="dateCreation">Date de création</option>
                     <option value="echeance">Échéance</option>
                     <option value="priorite">Priorité</option>
-                    <option value="titre">Titre</option>
+                </select>
+
+                <select id="sortOrder">
+                    <option value="asc">Croissant</option>
+                    <option value="desc">Décroissant</option>
                 </select>
 
                 <input type="text" id="searchText" placeholder="Rechercher...">
@@ -60,7 +70,7 @@
             </div>
 
             <div id="noTasks" style="display: none;">
-                <p>NOPE Aucune tâche trouvée</p>
+                <p>Aucune tâche trouvée</p>
                 <a href="/createTask" class="btn btn-primary">Créer une tâche</a>
             </div>
         </main>
