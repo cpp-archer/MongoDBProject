@@ -1,4 +1,6 @@
 const API_URL = 'http://localhost:5555';
+
+//tab de toute les taches
 let allTasks = [];
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -6,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupFilters();
 });
 
+//load de puis l'api
 async function loadTasks() {
     try {
         const response = await fetch(`${API_URL}/api/tasks`);
@@ -16,6 +19,8 @@ async function loadTasks() {
     }
 }
 
+
+//affichage des taches sous forme de carte
 function displayTasks(tasks) {
     const container = document.getElementById('tasksContainer');
     const noTasksDiv = document.getElementById('noTasks');
